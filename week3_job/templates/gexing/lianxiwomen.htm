@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1">
+   <title>联系我们--${siteinfo.index_title}</title>
+    <meta name="keywords" content="联系我们,${siteinfo.index_keywords}" />
+    <meta name="description" content="联系我们,${siteinfo.index_description}" />
+    
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        #parse("library/top.vm")
+        
+         <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:990px;padding-left:0px;padding-right:2px;" align=center>
+                <tr>
+                    <td style="width:990px;padding-top:10px;"  valign=top>
+                    
+
+                         <div class="xinwenlanDiv" style="width:990px;margin-top:4px;">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   联系我们&nbsp;</a></div>
+            
+                            
+                            <table style="width:100%;">
+                                <tr valign=top>
+                                    <td style="width: 680px;">
+                                          <div>
+                                          <div style="height:20px;width:600px;"></div>
+	 
+				 
+                                    </div>  
+                                          <div id="webctl_lianxiwomen" style="width: 639px;" class="lankuangDiv">
+                                             ${lianxiwomen}
+                                          
+                                          </div>
+	 
+				 
+                                    </td>
+                                    <td valign=top>
+                                    #parse("library/right.vm")
+                                    </td>
+                                
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        
+        
+         #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+</html>

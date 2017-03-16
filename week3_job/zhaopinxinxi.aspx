@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="zhaopinxinxi, App_Web_zhaopinxinxi.aspx.cdcab7d2" enablesessionstate="false" enableviewstate="false" enableEventValidation="false" viewStateEncryptionMode="Never" %>

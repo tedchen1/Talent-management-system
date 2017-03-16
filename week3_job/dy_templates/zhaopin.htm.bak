@@ -1,0 +1,17 @@
+1document.write('' 
+#set($zhiweis=$zhiweiobj.getList(20))                
+#foreach($zhiwei in $zhiweis)               
++'  <li> '              
++'     <a href="${yuming}createhtml/zhiwei_${zhiwei.id}.htm" target=_blank> '  //职位页面链接地址               
++'         <span>${tihuan.tihuanDate("${zhiwei.zhaopinksrq}")}</span> ' //招聘开始日期               
++'         <span>${zhiwei.name}</span> '                                //职位名称               
++'         <span>${zhiwei.qiye_name}</span> '                           //企业名称                
++'         <span>${zhiwei.xingzhi}</span> '                             //职位性质               
++'         <span> '              
++'         ${tihuan.tihuanJine("${zhiwei.yuexin}")}/月 '              //职位月薪               
++'         </span> '               
++'         <span style="width:60px;">${tihuan.tihuanDate("${zhiwei.zhaopinjsrq}")}</span> '//招聘结束日期               
++'     </a> '               
++'  </li> '                 
+#end 
++'');

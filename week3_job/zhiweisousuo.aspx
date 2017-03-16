@@ -1,0 +1,1 @@
+﻿<%@ page language="C#" autoeventwireup="true" inherits="zhiweisousuo, App_Web_zhiweisousuo.aspx.cdcab7d2" enablesessionstate="False" enableviewstate="false" enableEventValidation="false" viewStateEncryptionMode="Never" %>

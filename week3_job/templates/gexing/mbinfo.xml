@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <mbname key="tlt1" tupian="mbtu.gif">个性模板</mbname>
+  <appSettings>
+    <add key="index.htm" keycn="【首页】 index.aspx模板" url="index.aspx"/>
+    <add key="jianzhixinxi.htm" keycn="【兼职信息】 jianzhixinxi.aspx模板" url="jianzhixinxi.aspx" />
+    <add key="lianxiwomen.htm" keycn="【联系我们】 lianxiwomen.aspx模板" url="lianxiwomen.aspx"/>
+    <add key="qiye_login.htm" keycn="【企业登录】 qiye_login.aspx模板" url="qiye_login.aspx" />
+    <add key="qiye_zhuce.htm" keycn="【企业注册】 qiye_zhuce.aspx模板"  url="qiye_zhuce.aspx"/>
+    <add key="rencaixinxi.htm" keycn="【人才信息】 rencaixinxi.aspx模板"  url="rencaixinxi.aspx"/>
+    <add key="vipfuwu.htm" keycn="【vip服务】 vipfuwu.aspx模板"  url="vipfuwu.aspx"/>
+    <add key="wangzhanshengming.htm" keycn="【网站声明】 wangzhanshengming.aspx模板"  url="wangzhanshengming.aspx"/>
+    <add key="yonghuzhuce.htm" keycn="【用户注册】 yonghuzhuce.aspx模板"  url="yonghuzhuce.aspx"/>
+    <add key="youqinglianjie.htm" keycn="【友情链接】 youqinglianjie.aspx模板"  url="youqinglianjie.aspx"/>
+    <add key="zhaopinxinxi.htm" keycn="【招聘信息】 zhaopinxinxi.aspx模板"  url="zhaopinxinxi.aspx"/>
+    <add key="zhaopinxinxivip.htm" keycn="【热门招聘信息】 zhaopinxinxivip.aspx模板"  url="zhaopinxinxivip.aspx"/>
+    <add key="zhiweisousuo.htm" keycn="【职位搜索】 zhiweisousuo.aspx模板"  url="zhiweisousuo.aspx"/>
+    <add key="zixunlist.htm" keycn="【资讯列表】 zixunlist.aspx模板"  url="zixunlist.aspx"/>
+    <add key="zixunzhongxin.htm" keycn="【资讯中心】 zixunzhongxin.aspx模板"  url="zixunzhongxin.aspx"/>
+    <add key="library/end.vm" keycn="【页面底部】 页面底部模板"  url="lianxiwomen.aspx"/>
+    <add key="library/guanggaolist.vm" keycn="列出所有广告的模板" url=""/>
+    <add key="library/guanggaolist2.vm" keycn="列出前8个广告的模板"  url="zixunzhongxin.aspx"/>
+    <add key="library/right.vm" keycn="页面右侧联系方式的模板"  url="lianxiwomen.aspx"/>
+    <add key="library/top.vm" keycn="【页面头部】 页面头部的模板"  url="lianxiwomen.aspx"/>
+    <add key="library/zixunright.vm" keycn="页面右侧资讯列表的模板"  url="jianzhixinxi.aspx"/>
+    <add key="moban/zixun_{id}.htm" keycn="静态页面 －－【资讯页面模板】"  url=""/>
+    <add key="moban/gongsi_{id}.htm" keycn="静态页面 －－【公司页面模板】"  url=""/>
+    <add key="moban/rencai_{id}.htm" keycn="静态页面 －－【人才页面模板】"  url=""/>
+    <add key="moban/zhiwei_{id}.htm" keycn="静态页面 －－【职位页面模板】"  url=""/>
+    <add key="moban/zhiweilist_{id}.htm" keycn="静态页面 －－【职位列表模板】"  url=""/>
+    <add key="moban/zhiweilist_left_{id}.htm" keycn="静态页面 －－【职位列表左菜单页面模板】"  url=""/>
+
+
+  </appSettings>
+</configuration>

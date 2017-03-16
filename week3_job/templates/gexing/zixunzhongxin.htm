@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>求职招聘资讯中心--${siteinfo.index_title}</title>
+    <meta name="keywords" content="求职招聘资讯中心,${siteinfo.index_keywords}" />
+    <meta name="description" content="求职招聘资讯中心,${siteinfo.index_description}" />
+    
+    
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:1000px;padding-left:5px;padding-right:2px;">
+                <tr>
+                    <td id="webctl_zixunlx" runat=server style="width: 780px;padding-top:10px; height: 378px;" valign=top>
+                    #foreach($lx in $lxs)
+                      
+                        <div class="xinwenlanDiv" style="width: 381px; float:left;margin:4px 2px 4px 2px;">
+                            <div class="xinwenlanDiv_top">
+                                <div class="xinwenlanDiv_top_tou">
+                                </div>
+                                <a class="kuangBiaoti" style="left: 3px; float: left; position: relative; top: 3px">
+                                    ${lx.name} </a><a class="kuangBiaoti" href="zixunlist.aspx?lx=${lx.id}" style="left: -5px; float: right; position: relative;
+                                        top: 3px">更多&gt;&gt;</a></div>
+                           
+                            <ul style="padding-right: 4px; padding-left: 4px; padding-bottom: 5px; width: 366px;
+                                color: #0066cc; padding-top: 5px">
+                                #set($zxs=$zxcx.getList("5","${lx.id}"))
+                                #foreach($zx in $zxs)
+                                   <li> <A  href="createhtml/zixun_${zx.id}.htm">${zx.title}</A></li>
+                                #end
+                            </ul>
+                        </div>
+                    #end   
+                    </td>
+                    <td valign=top style="width: 210px;padding-left:5px;padding-top:10px;">
+                        #parse("library/guanggaolist2.vm")
+                    </td>
+                    
+                </tr>
+            </table>
+        
+        #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+</html>

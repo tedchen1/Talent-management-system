@@ -1,0 +1,70 @@
+﻿
+   <hr />
+<div id="yewei" style="width:1000px;">
+        <div id=yeweimenu>
+        <ul id="yeweimenu_ul" style="margin-left:290px;">
+
+
+          <li>
+            <a href="vipfuwu.aspx">收费服务</a>
+          </li>
+          <li>
+            <a>
+              |
+            </a>
+          </li>
+
+          <li>
+            <a href="lianxiwomen.aspx">
+                    联系我们
+                </a>
+            </li>
+            <li>
+                <a>
+                |
+                </a>
+            </li>
+           <li>
+                <a href="wangzhanshengming.aspx">网站声明
+                </a>
+            </li>
+                        <li>
+                <a>
+                |
+                </a>
+            </li>
+            <li>
+                <a href="youqinglianjie.aspx">友情连接
+                </a>
+            </li>
+          <li>
+            <a>
+              |
+            </a>
+          </li>
+          <li>
+            <a href="sitemap.aspx">
+              网站地图
+            </a>
+          </li>
+          <li>
+            <a>
+              |
+            </a>
+          </li>
+          <li>
+            <a href="admin/login.aspx">
+              后台管理
+            </a>
+          </li>
+          
+        </ul>
+        
+        </div>
+        <hr />
+        <div id="yewei_3">
+            ${yewei}
+        </div>
+        
+    </div>
+    ${indexhtml}

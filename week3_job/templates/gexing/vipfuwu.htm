@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1">
+    <title>VIP服务--${siteinfo.index_title}</title>
+    <meta name="keywords" content="VIP服务,${siteinfo.index_keywords}" />
+    <meta name="description" content="VIP服务,${siteinfo.index_description}" />
+    
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:990px;padding-left:0px;padding-right:2px;" align=center>
+                <tr>
+                    <td style="width:990px;padding-top:10px;"  valign=top>
+                    
+                       
+                         <div class="xinwenlanDiv" style="width:990px;margin-top:4px; ">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   收费服务
+                                </a>
+                            </div>
+                            
+                            <table style="width:100%;">
+                                <tr>
+                                    <td style="width: 680px;">
+                                          <div ></div>
+                                          <div id="webctl_baojia">
+                                              #foreach($tc in $taocan)
+                                                  <div style="width:202px; height: 119px;" class="lankuangDiv">
+                                                        <div align="center">
+                                                            <strong>${tc.name}</strong></div>
+                                                        <div style="margin-left:20px;margin-top:5px;">
+                                                            简历联系方式: ${tc.jianlicksj}天内<br />
+                                                            招聘信息数量: ${tc.zhaopinsl}个
+                                                            <br />
+                                                            站内消息数量: 全部</div>
+                                                        <div style="margin-top:5px;margin-left:15px;">
+                                                            <span class="xmoney">${tc.jijia}元/季 , ${tc.nianjia}元/年</span>
+                                                            <br />
+                                                        </div>
+                                                    </div>
+                                              #end
+                                          
+                                          </div>  
+                                          <div style="height:20px;width:600px;"></div>
+                                          <div style=" width: 651px;" class="lankuangDiv">
+                                              <div id="webctl_zhanghao" class="b">
+                                                 ${huikuanzhanghu}
+                                              </div>
+                                          
+                                          </div>
+                                          <div style="height:20px;width:600px;"></div>
+                                           
+                                        <div class="y" style="width:642px;">
+						                    
+						                    <div class="yn">
+						                    注意:
+						                    </div>
+						                    
+						                        <div id="webctl_zhuyi">
+						                           ${kuikuanzhuyi}
+					                            </div>
+	 
+				                        </div>
+                                    </td>
+                                    <td valign=top>
+                                        #parse("library/right.vm")
+                                        
+                                        
+                                        
+                                    </td>
+                                
+                                </tr>
+                                
+                            </table>
+                        </div>
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        &nbsp;
+        
+        #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+</html>

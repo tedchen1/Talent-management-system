@@ -1,0 +1,17 @@
+document.write(''         
+#set($rencais=$rencaiobj.getListRows("20"))         
+#foreach($rencai in $rencais)         
++'    <li style="width: 100%">'         
++'       <a href="${yuming}createhtml/rencai_${rencai.id}.htm" target=_blank>'         
++'              <span>${tihuan.tihuanDate("${rencai.fabu_date}")}</span>'         
++'               <span>${rencai.xingming}</span>'         
++'               <span>${rencai.xingbie}</span>'         
++'               <span>${rencai.jiaoyucd}</span>'         
++'               <span>${rencai.qw_guozuohy_name}</span>'         
++'               <span>${rencai.gongzuonx}Äê</span>'         
++'               <span>${rencai.qw_guozuoxz}</span>'         
++'               <span>${tihuan.tihuanDate("${rencai.qw_yuexin}")}/ÔÂ</span>'         
++'       </a>'         
++'    </li>'         
+#end         
++'');

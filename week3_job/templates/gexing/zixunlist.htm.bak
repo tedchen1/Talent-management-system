@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1">
+    <title>资讯列表-寿光工作网,寿光人才网,寿光招聘网</title>
+    <meta name="keywords" content="寿光工作资讯,寿光人才资讯,寿光招聘资讯,寿光招聘会资讯,寿光企业资讯-寿光工作网,寿光人才网,寿光招聘网" />
+    <meta name="description" content="寿光工作资讯,寿光人才资讯,寿光招聘资讯,寿光招聘会资讯,寿光企业资讯-寿光工作网,寿光人才网,寿光招聘网" />
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:1000px;padding-left:5px;padding-right:2px;">
+                <tr>
+                    <td style="width: 780px;padding-top:10px;" valign=top>
+                    
+                         <div class="xinwenlanDiv" style="width:780px;margin-top:4px;">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   最新资讯&nbsp;</a></div>
+                           
+                            <ul id="datalist" class="liebiao" style="padding:5px 4px 5px 10px;width:98%;">
+                                #foreach($zixun in $zixuns)
+                                <li>&nbsp;<a href="createhtml/zixun_${zixun.id}.htm">→ ${zixun.title} </a></li>
+                                #end
+                            
+                                   
+                            </ul>
+
+                        </div>
+                        <div id="fenyeDiv" style="width:731px;margin-top:4px;line-height:30px;vertical-align:middle;padding-left:50px;" class="xinwenlanDiv">
+                              ${fenye}
+                        </div>
+                    </td>
+                    <td valign=top style="width: 196px;padding-left:5px;padding-top:10px;">
+                        #parse("library/zixunright.vm")
+                    </td>
+                    
+                </tr>
+            </table>
+        #parse("library/end.vm")
+    </div>
+    </form>
+</body>
+</html>

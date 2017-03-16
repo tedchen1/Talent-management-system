@@ -1,0 +1,22 @@
+﻿
+<div id="datalist_zixun" runat=server style="width:200px;">
+     #foreach($lx in $lxs)
+      <DIV class=xinwenlanDiv style="MARGIN-TOP: 4px; WIDTH: 200px">
+      <DIV class=xinwenlanDiv_top>
+      <DIV class=xinwenlanDiv_top_tou></DIV><A class=kuangBiaoti 
+      style="LEFT: 3px; FLOAT: left; POSITION: relative; TOP: 3px">${lx.name}</A><A 
+      class=kuangBiaoti 
+      style="LEFT: -5px; FLOAT: right; POSITION: relative; TOP: 3px" 
+      href="zixunlist.aspx?lx=${lx.id}">更多&gt;&gt;</A> </DIV>
+      <UL 
+      style="PADDING-RIGHT: 4px; PADDING-LEFT: 4px; PADDING-BOTTOM: 5px; WIDTH: 170px; COLOR: #0066cc; PADDING-TOP: 5px">
+        #set($zxs=$zxcx.getList("8","${lx.id}"))
+        #foreach($zx in $zxs)
+        <LI>
+        <A  href="createhtml/zixun_${zx.id}.htm">${zx.title}</A>
+        </LI>
+        #end
+       </UL>
+       </DIV>
+      #end          
+</div>

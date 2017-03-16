@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>人才信息--${siteinfo.index_title}</title>
+    <meta name="keywords" content="人才信息,${siteinfo.index_keywords}" />
+    <meta name="description" content="人才信息,${siteinfo.index_description}" />
+    
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:1000px;padding-left:5px;padding-right:2px;">
+                <tr>
+                    <td style="width: 780px;padding-top:10px;" valign=top>
+                    
+                       <table class="xinwenlanDiv" style="margin-top: 4px; width: 984px;margin-top:8px;line-height: 25px;vertical-align:middle;
+                                 font-weight: bold;font-size:13px;background-color:#EEF9FD;">
+                                 <tr>
+                                    <td style="height:5px;">
+                                    
+                                    </td>
+                                 </tr>
+                                    <tr>
+                                        <td style="width: 99px; text-align: right;margin-top:4px;">
+                                            行业：</td>
+                                        <td style="width: 300px">
+                                        <select id="ctlqw_guozuohy"  style="width: 290px">
+                                            <option selected="selected" value="">不限</option>
+                                            #foreach($hangye in $hangyes)
+                                            <option value="${hangye.id}">${hangye.name}</option>
+                                            #end
+                                        </select>
+                                     </td>
+                                        <td style="width: 78px; text-align: right;">
+                                            性别：</td>
+                                        <td style="width: 174px">
+                                        
+                                        <select id="ctlxingbie" style="width: 163px">
+                                            <option selected="selected" value="">不限</option>
+                                            <option value="男">男</option>
+                                            <option value="女">女</option>
+                                            
+                                        
+                                        </select>
+                                        
+                                        </td>
+                                        <td style="width: 78px; text-align: right;">
+                                            教育程度：</td>
+                                        <td>
+                                           
+                                            
+                                            <select name="ctlxueli" id="ctlxueli" style="width:205px;">
+	                                            <option selected="selected" value="">不限</option>
+	                                            <option value="大专">大专</option>
+	                                            <option value="本科">本科</option>
+	                                            <option value="研究生">研究生</option>
+	                                            <option value="博士">博士</option>
+	                                            <option value="大专以下">大专以下</option>
+
+                                            </select>
+                                            </td>
+                                    </tr>
+             <tr>
+                                        <td style="width: 99px; text-align: right;">
+                                            工作年限：</td>
+                                        <td style="width: 300px">
+                                        <select name="ctlgongzuonx" id="ctlgongzuonx" style="width:289px;">
+	                                        <option selected="selected" value="">不限</option>
+	                                        <option value="0-1">无工作经验</option>
+	                                        <option value="1">1年</option>
+	                                        <option value="1-3">1-3年</option>
+	                                        <option value="3-5">3-5年</option>
+	                                        <option value="5-10">5-10年</option>
+	                                        <option value="10-60">10年以上</option>
+
+                                        </select>
+                                        </td>
+                                    </tr>
+             
+                                    <tr>
+                 <td colspan="6" style="padding:1px 70px 1px 80px">
+                     &nbsp; &nbsp;<input id="Button1" type="button" value=" 查 询 " style="cursor: hand" onclick="return IMG1_onclick()" /></td>
+                                    </tr>
+                                <tr>
+                                    <td style="height:3px;">
+                                    
+                                    </td>
+                                 </tr>
+                                </table>
+                                
+                                
+                                        
+                         <div class="xinwenlanDiv" style="width:982px;margin-top:4px;">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   人才信息
+                                </a>
+                            </div>
+               
+                            <div class="liebiaoBiaoti" style="width:974px;height:24px;">
+                                   <div style="width:80px;">发布日期</div>
+                                   <div style="width:72px;">姓名</div>
+                                   <div style="width:50px;">性别</div>
+                                   <div style="width:80px;">学历</div>
+                                   <div style="width:180px;">期望职业</div>
+                                   <div style="width:60px;">工作年限</div>
+                                   <div style="width:75px;">工作性质</div>
+                                   <div style="width:85px;">工资要求</div>
+                                   <div style="width:85px;">学历</div>
+                                   <div style="width:85px;">
+                                       操作</div>
+                                
+                            </div>
+                            <ul id="datalist" runat=server class="liebiao" style="padding:5px 4px 5px 10px;width:98%;">
+                               #foreach($rencai in $rencais)
+                                <li style="width: 100%">
+                                          <div style="width:7px;"></div>
+                                          <div style="width:93px;">${tihuan.tihuanDate("${rencai.fabu_date}")}</div>
+                                           <div style="width:82px;">${rencai.xingming}</div>
+                                           <div style="width:60px;">${rencai.xingbie}</div>
+                                           <div style="width:90px;">${rencai.jiaoyucd}</div>
+                                           <div style="width:190px;">${rencai.qw_guozuohy_name}</div>
+                                           <div style="width:80px;">${rencai.gongzuonx}年</div>
+                                           <div style="width:83px;">${rencai.qw_guozuoxz}</div>
+                                           <div style="width:95px;">
+
+  #if(${rencai.qw_yuexin}==0)
+                      面议
+                    #else
+                      ${rencai.qw_yuexin}/月
+                    #end
+
+
+
+</div>
+                                            <div style="width:95px;">${rencai.jiaoyucd}</div>
+                                          
+                                           <div style="width:70px;">
+                                        
+                                        <a href="createhtml/rencai_${rencai.id}.htm" target=_blank style="color:Red;">【查看】</a>
+                                        
+                                        </div>
+                                   
+                               #end
+                                </li>
+                            
+                                   
+                            </ul>
+
+                        </div>
+                        <div id="fenyeDiv" runat=server style="width:930px;height:30px;margin-top:4px;line-height:30px;vertical-align:middle;padding-left:50px;" class="xinwenlanDiv">
+                            ${fenye}
+                        </div>
+                    </td>
+                  
+                    
+                </tr>
+            </table>
+        
+         #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+<script>
+    function IMG1_onclick() 
+    {
+   
+        var ctlqw_guozuohy="hy="+document.getElementById("ctlqw_guozuohy").value;
+        var ctlxingbie="&xb="+escape(document.getElementById("ctlxingbie").value);
+        var ctlxueli="&xl="+escape(document.getElementById("ctlxueli").value);
+        var ctlgongzuonx="&nx="+escape(document.getElementById("ctlgongzuonx").value);
+       
+    
+        var page="&pg=1";
+        var url="rencaixinxi.aspx?"+ctlqw_guozuohy+ctlxingbie+ctlxueli+ctlgongzuonx+page;
+       
+        //
+        window.location.href=url;
+    }
+    function fuzhi()
+    {
+        requestToValue('hy','ctlqw_guozuohy',false);
+       
+        requestToValue('xb','ctlxingbie',true);
+        requestToValue('xl','ctlxueli',true);
+        requestToValue('nx','ctlgongzuonx',true);
+    }
+    //
+  
+    fuzhi();
+</script>
+
+</html>

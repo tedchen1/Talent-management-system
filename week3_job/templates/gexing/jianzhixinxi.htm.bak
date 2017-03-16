@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>兼职信息</title>
+    <meta name="keywords" content="兼职信息" />
+    <meta name="description" content="兼职信息" />
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:1000px;padding-left:5px;padding-right:2px;">
+                <tr>
+                    <td style="width: 780px;padding-top:10px;" valign=top>
+                    <table class="xinwenlanDiv" style="margin-top: 4px; width: 985px;margin-top:8px;line-height: 25px;vertical-align:middle;
+                     font-weight: bold;font-size:13px;background-color:#EEF9FD;">
+                     <tr>
+                        <td style="height:5px;">
+                        
+                        </td>
+                     </tr>
+                        <tr>
+                            <td style="width: 99px; text-align: right;margin-top:4px;">
+                                行业：</td>
+                            <td style="width: 228px">
+                            <select id="ctlqw_guozuohy"  style="width: 225px">
+                                <option selected="selected" value="">不限</option>
+                                #foreach($hangye in $hangyes)
+                                <option value="${hangye.id}">${hangye.name}</option>
+                                #end
+                            </select>
+                         </td>
+                            <td style="width: 78px; text-align: right;">
+                                地区：</td>
+                            <td style="width: 253px">
+                            
+                            <select id="txtsuoshuqy" style="width: 181px">
+                                <option selected="selected" value="">不限</option>
+                                #foreach($diqv in $diqvs)
+                                <option value="${diqv.id}">${diqv.name}</option>
+                                #end
+                            </select>
+                            
+                            </td>
+                            <td style="width: 78px; text-align: right;">
+                                发布日期：</td>
+                            <td>
+                               
+                                <select id="ctlriqi"  style="width: 180px">
+                                <option value="36500" selected="selected">不限</option>
+                                    <option value="1">近一天</option>
+                                    <option value="2">近两天</option>
+                                    <option value="3">近三天</option>
+                                    <option value="7">近一周</option>
+                                    <option value="14">近两周</option>
+                                    <option value="30">近一月</option>
+                                    <option value="60">近两月</option>
+                                    <option value="90">近三月</option>
+                                    <option value="365">近一年</option>
+                                    
+                                </select></td>
+                        </tr>
+ <tr>
+                            <td style="width: 99px; text-align: right;">
+                                企业名称：</td>
+                            <td style="width: 228px">
+                            
+                            <input id="ctlqiye_name" style="width: 219px; height: 19px" type="text" maxlength="50" /></td>
+                            <td style="width: 78px; text-align: right;">
+                                性质：</td>
+                            <td style="width: 253px">
+                            
+                            
+                                <select id="ctlxingzhi" style="width: 181px">
+                                    <option  selected="selected" value="兼职">兼职</option>
+                                    <option value="">不限</option>
+                                    <option value="全职">全职</option>
+                                   
+                                    
+                                </select>
+                            </td>
+                            <td style="width: 78px; text-align: right;">
+                                性别要求：</td>
+                            <td>
+                             <select id="ctlxingbieyq" style="width: 181px">
+                                    <option selected="selected" value="">不限</option>
+                                    <option value="男">男</option>
+                                    <option value="女">女</option>
+                                    
+                                </select>
+                 
+                            
+                            </td>
+                        </tr>
+ <tr>
+                            <td style="width: 99px; text-align: right;">
+                                职位名称：</td>
+                            <td style="width: 228px">
+                                <input id="ctlzhiwei_name" style="width: 219px; height: 19px" type="text" maxlength="50" /></td>
+                            <td colspan="4">
+                                </td>
+                        </tr>
+                        <tr>
+     <td colspan="6" style="padding:1px 70px 1px 80px">
+         &nbsp; &nbsp;<input id="Button1" type="button" value=" 查 询 " style="cursor: hand" onclick="return IMG1_onclick()" /></td>
+                        </tr>
+                    <tr>
+                        <td style="height:3px;">
+                        
+                        </td>
+                     </tr>
+                    </table>
+                      
+                         <div class="xinwenlanDiv" style="width:980px;margin-top:4px;">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   最新招聘
+                                </a>
+                            </div>
+                           
+                            
+                            <div class="liebiaoBiaoti" style="width:973px;height:24px;">
+                                   <div style="width:60px;">发布日期</div>
+                                   
+                                   <div style="width:145px;">招聘职位</div>
+                                   <div style="width:210px;">
+                                       单位名称</div>
+                                   <div style="width:60px;">性质</div>
+                                   <div style="width:50px;">月薪</div>
+                                   <div style="width:73px;">截止日期</div>
+                                   <div style="width:115px;">工作地区</div>
+                                   <div style="width:147px;">操作</div>
+                                
+                            </div>
+                            <ul id="datalist" runat=server class="liebiao" style="padding:2px 4px 5px 10px;width:98%;">
+                            
+                              #foreach($zhiwei in $zhiweis)
+                                <li style="width: 99%">
+                                   
+                                       <div style="width:65px; text-align:center;">${tihuan.tihuanDate("${zhiwei.zhaopinksrq}")}</div>
+                                       <div style="width:152px;position:relative;left:5px; top: 0px;">${zhiwei.name}</div>
+                                       <div style="width:232px;">${zhiwei.qiye_name}</div>
+                                       <div style="width:68px;">${zhiwei.xingzhi}</div>
+                                       <div style="width:70px;">
+
+                                       ${tihuan.tihuanJine("${zhiwei.yuexin}")}/月
+                                       </div>
+                                       <div style="width:90px;">${tihuan.tihuanDate("${zhiwei.zhaopinjsrq}")}</div>
+                                        <div style="width:119px;">${zhiwei.qiye_dqname}</div>
+                                        <div style="width:139px;">
+                                        
+                                        <a href="createhtml/zhiwei_${zhiwei.id}.htm" target=_blank style="color:Red;">【查看】</a>
+                                        <a href="javascript:shenqing('申请职位','zhiweishenqing','${zhiwei.id}');" style="color:Red;">【申请职位】</a>
+                                        </div>
+                                   
+                                </li>
+                              #end
+                                   
+                            </ul>
+
+                        </div>
+                        
+                         <div id="fenyeDiv"  style="width:930px;height:30px;margin-top:4px;line-height:30px;vertical-align:middle;padding-left:50px;" class="xinwenlanDiv">
+                            ${fenye}
+                        </div>
+                        
+                    </td>
+                    
+                    
+                </tr>
+            </table>
+        
+         #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+<script>
+    function IMG1_onclick() 
+    {
+        var ctlzhiwei_name="name="+escape(document.getElementById("ctlzhiwei_name").value);
+        var ctlqw_guozuohy="&hy="+document.getElementById("ctlqw_guozuohy").value;
+        var txtsuoshuqy="&dq="+document.getElementById("txtsuoshuqy").value;
+        var ctlriqi="&rq="+document.getElementById("ctlriqi").value;
+
+         
+        var ctlqiye_name="&qn="+escape(document.getElementById("ctlqiye_name").value);
+        var ctlxingzhi="&xz="+escape(document.getElementById("ctlxingzhi").value);
+        var ctlxingbieyq="&xb="+escape(document.getElementById("ctlxingbieyq").value);
+    
+        var page="&pg=1";
+        var url="jianzhixinxi.aspx?"+ctlzhiwei_name+ctlqw_guozuohy+txtsuoshuqy+ctlriqi+ctlqiye_name+ctlxingzhi+ctlxingbieyq+page;
+       
+        //
+        window.location.href=url;
+    }
+    function fuzhi()
+    {
+        requestToValue('name','ctlzhiwei_name',true);
+        requestToValue('hy','ctlqw_guozuohy',false);
+        requestToValue('dq','txtsuoshuqy',false);
+        requestToValue('rq','ctlriqi',false);
+        requestToValue('qn','ctlqiye_name',true);
+        requestToValue('xz','ctlxingzhi',true);
+        requestToValue('xb','ctlxingbieyq',true);
+    }
+    //
+  
+    fuzhi();
+</script>
+</html>

@@ -1,0 +1,116 @@
+﻿body 
+{
+	margin:0;
+	font-size:13px;
+	color: #330000;
+}
+div
+{
+	margin:0 auto;	
+}
+a
+{
+	font-size: 13px;  text-decoration: none;
+}
+ul
+{
+	list-style-type:none;
+	margin:0px;
+}
+h1,h2,h3,h4,h5,h6{font-size:12px;line-height:20px;margin:0 0 0 0;} 
+a:hover
+{
+	color:#CC0000;
+}
+li
+{
+	float:left;
+}
+img
+{
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none;
+}
+
+/*图片Div*/
+.tupianDiv
+{
+		
+}
+.tupianDiv_top
+{
+	padding-left: 10px; padding-top: 2px; border-bottom: #fbc8c7 2px solid;
+}
+.kuangBiaoti
+{
+	color: #f00b0b; margin-top: 3px; font-weight: bold; font-size: 13px; margin-bottom: 3px;
+}
+.tupianDiv_tupians
+{
+	padding:4px 2px 2px 4px;
+}
+.tupianDiv_tupians li
+{
+	padding:2px 0px 0px 0px;
+}
+.tupianDiv_tupians a
+{
+		 border-right: lightgrey 1px solid;
+		 border-top: lightgrey 1px solid; 
+		 margin: 2px 2px 0px 0px; 
+		 border-left: lightgrey 1px solid; 
+		 border-bottom: lightgrey 1px solid;
+}
+.tupianDiv_tupians a:hover
+{
+		 border-right: lightgrey 1px red;
+		 border-top: lightgrey 1px red; 
+		 margin: 2px 2px 0px 0px; 
+		 border-left: lightgrey 1px red; 
+		 border-bottom: lightgrey 1px red;
+}
+/*新闻栏框1*/
+.xinwenlanDiv
+{
+	 border-right: #fbc8c7 1px solid; border-top: #fbc8c7 1px solid; border-left: #fbc8c7 1px solid; border-bottom: #fbc8c7 1px solid;
+}
+.xinwenlanDiv_top a:hover
+{
+	color:Green;
+}
+.xinwenlanDiv_top
+{
+	width:100%; line-height: 25px;border-bottom: #fbc8c7 1px solid;BACKGROUND-IMAGE: url(../images/right10_bg.jpg);vertical-align:middle;
+}
+.xinwenlanDiv_top_tou
+{
+	width:5px;height:26px;background-color:Red;float:left;position:relative;top:1px;
+}
+.xinwenlanDiv_top_tou2
+{
+	BACKGROUND-IMAGE: url(../images/right10_bg2.jpg);width:70px;height:23px;float:left;position:relative;left:10px;top:-1px;text-align:center;
+}
+.xinwenlanDiv_top_tou3
+{
+	position:relative;top:-6px;left:14px;background-color:White;width:70px;float:left;text-align:center;
+}
+.xinwenlanDiv_top_tou3 a:hover
+{
+	color:Green;
+}
+.xinwenlanDiv li
+{
+	VERTICAL-ALIGN: middle; OVERFLOW: hidden; WIDTH: 97%; WHITE-SPACE: nowrap;  TEXT-OVERFLOW: ellipsis;
+	margin:4px 0px 4px 0px;
+	width:200px;
+}
+.kuangBiaotiWhite
+{
+	color:White; margin-top: 3px; font-weight: bold; font-size: 13px; margin-bottom: 3px;
+}
+/*固定长度
+*/
+.gudingchangdu
+{
+	VERTICAL-ALIGN: middle; OVERFLOW: hidden; WIDTH: 97%; WHITE-SPACE: nowrap;  TEXT-OVERFLOW: ellipsis;
+}
+

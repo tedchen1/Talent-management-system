@@ -1,0 +1,36 @@
+﻿<html>
+	<head>
+		<meta name=vs_targetSchema content="http://schemas.microsoft.com/intellisense/ie5">
+<script language="JScript">
+		
+			if (window.dialogArguments != null)
+			{
+				var t = "";
+				if (window.dialogArguments.title != null)
+					t = window.dialogArguments.title;
+				else
+					t = "Dialog";
+				
+				document.title = t + "　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　...";
+			}
+		</script>
+		
+	</head>
+	<body scroll="no">
+		<script language="JScript">
+		
+			if (window.dialogArguments != null)
+			{
+				var scrolling = "no";
+			
+				if (new String(window.dialogArguments.scrolling).toLowerCase() == "yes")
+					scrolling = "auto";
+							
+				document.write('<iframe border="0" src="' + window.dialogArguments.url + '" scrolling="' + scrolling + '" frameborder="0" marginwidth="0" marginheight="0" hspace="0" vspace="0" allowtransparency="true" style="width:100%;height:100%"></iframe>');
+			}
+			
+			
+		</script>
+	</body>
+</html>
+

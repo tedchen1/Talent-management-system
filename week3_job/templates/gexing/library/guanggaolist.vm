@@ -1,0 +1,16 @@
+﻿<div class="tupianDiv" style="width:100%;">
+    
+    <div class="tupianDiv_top">
+        <font class="kuangBiaoti" >品牌企业 |&nbsp; Brand Enterprise
+        </font>
+    </div>
+    
+    <div class="tupianDiv_tupians"  style="width:100%;">
+        <ul id="jm_gg1_ul">
+          #set($ggs=$ggt.showPs(""))
+          #foreach($gg in $ggs)
+          <li ><a href="${gg.url}" target=_blank> <img src="${gg.tupianurl}" /></a> </li>
+          #end
+        </ul>
+    </div>
+</div>

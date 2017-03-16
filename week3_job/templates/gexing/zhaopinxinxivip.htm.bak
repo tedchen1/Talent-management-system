@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="Head1" runat="server">
+    <title>VIP招聘</title>
+    <meta name="keywords" content="最新招聘" />
+    <meta name="description" content="最新招聘" />
+    <link href="templates/gexing/css/base.css" rel="stylesheet" type="text/css" />
+    <script src="templates/gexing/js/base.js"></script>
+</head>
+<body>
+    <form id="form1">
+    <div>
+        #parse("library/top.vm")
+        
+            <table id=yezhong2 cellpadding=0 cellspacing=0 border=0 style="width:1000px;padding-left:5px;padding-right:2px;">
+                <tr>
+                    <td style="width: 780px;padding-top:10px;" valign=top>
+                    
+                       
+                            <div class="xinwenlanDiv" style="width:980px;margin-top:4px;">
+                            <div class="xinwenlanDiv_top">
+                               <div class="xinwenlanDiv_top_tou2">
+                               
+                               </div> 
+                               <a class="kuangBiaotiWhite" href="#" style="position:relative;left:-53px;float:left;">
+                                   VIP招聘
+                                </a>
+                            </div>
+                           
+                            
+                            <div class="liebiaoBiaoti" style="width:973px;height:24px;">
+                                   <div style="width:60px;">发布日期</div>
+                                   
+                                   <div style="width:145px;">招聘职位</div>
+                                   <div style="width:210px;">
+                                       单位名称</div>
+                                   <div style="width:60px;">性质</div>
+                                   <div style="width:50px;">月薪</div>
+                                   <div style="width:73px;">截止日期</div>
+                                   <div style="width:115px;">工作地区</div>
+                                   <div style="width:147px;">操作</div>
+                                
+                            </div>
+                            <ul id="datalist" runat=server class="liebiao" style="padding:2px 4px 5px 10px;width:98%;">
+                            
+                              #foreach($zhiwei in $zhiweis)
+                                <li style="width: 99%">
+                                   
+                                       <div style="width:65px; text-align:center;">${tihuan.tihuanDate("${zhiwei.zhaopinksrq}")}</div>
+                                       <div style="width:152px;position:relative;left:5px; top: 0px;">${zhiwei.name}</div>
+                                       <div style="width:232px;">${zhiwei.qiye_name}</div>
+                                       <div style="width:68px;">${zhiwei.xingzhi}</div>
+                                       <div style="width:70px;">
+
+                                       ${tihuan.tihuanJine("${zhiwei.yuexin}")}/月
+                                       </div>
+                                       <div style="width:90px;">${tihuan.tihuanDate("${zhiwei.zhaopinjsrq}")}</div>
+                                        <div style="width:119px;">${zhiwei.qiye_dqname}</div>
+                                        <div style="width:139px;">
+                                        
+                                        <a href="createhtml/zhiwei_${zhiwei.id}.htm" target=_blank style="color:Red;">【查看】</a>
+                                        <a href="javascript:shenqing('申请职位','zhiweishenqing','${zhiwei.id}');" style="color:Red;">【申请职位】</a>
+                                        </div>
+                                   
+                                </li>
+                              #end
+                                   
+                            </ul>
+
+                        </div>
+                        
+                         <div id="fenyeDiv"  style="width:930px;height:30px;margin-top:4px;line-height:30px;vertical-align:middle;padding-left:50px;" class="xinwenlanDiv">
+                            ${fenye}
+                        </div>
+                        
+                    </td>
+                   
+                    
+                </tr>
+            </table>
+        
+         #parse("library/end.vm")
+    
+    </div>
+    </form>
+</body>
+</html>

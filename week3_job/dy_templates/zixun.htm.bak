@@ -1,0 +1,6 @@
+document.write(''          
+#set($zixuns=$zixunobj.getList("10","1"))         
+#foreach($zixun in $zixuns)           
++'  <li>&nbsp;<a href="${yuming}createhtml/zixun_${zixun.id}.htm">¡ú ${zixun.title} </a></li>'         
+#end         
+'');

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <appSettings>
+    <add key="rc_flash" value="rc_flash" cxbb="2.5" />
+  </appSettings>
+</configuration>
